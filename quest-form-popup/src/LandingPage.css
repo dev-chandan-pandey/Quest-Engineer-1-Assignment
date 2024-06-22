@@ -1,16 +1,14 @@
 .landing-page {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: calc(100vh - 60px); /* Adjusted for footer height */
     background-color: #f0f0f0;
     position: relative;
-    text-align: center;
 }
 
 .landing-page .content {
-    max-width: 600px;
+    text-align: center;
 }
 
 .landing-page h1 {

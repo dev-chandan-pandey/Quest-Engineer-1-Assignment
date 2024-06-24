@@ -507,9 +507,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
 }
 
 .navbar {
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -533,6 +537,7 @@ body {
   padding: 0;
   display: flex;
   gap: 20px;
+  
 }
 
 .navbar-links a {
@@ -576,7 +581,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 50px;
-  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
   color: white;
   min-height: 400px;
 }

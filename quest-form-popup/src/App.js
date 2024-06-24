@@ -885,11 +885,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <header>
+      <header style={{position:"fixed",top:"15px",left:"5%",width:"90%"}}>
         <nav className={`navbar ${isNavOpen ? 'active' : ''}`}>
           <div className="navbar-logo">
             <a href="#home">Braze</a>
           </div>
+          
           <ul className={`navbar-links ${isNavOpen ? 'active' : ''}`}>
             <li><a href="#how-it-works" onClick={toggleNav}>How it Works</a></li>
             <li><a href="#product" onClick={toggleNav}>Product</a></li>

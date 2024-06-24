@@ -1,89 +1,3 @@
-/* .popup-form {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 300px;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.popup-form h3 {
-  margin-top: 0;
-}
-
-.popup-form label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.popup-form input[type="email"],
-.popup-form input[type="text"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.popup-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.popup-form button:hover {
-  background-color: #0056b3;
-}
-
-.popup-form .error {
-  color: red;
-  margin-top: 10px;
-}
-
-.popup-form .form-content {
-  flex: 1;
-}
-
-.popup-form .footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.popup-form .footer button {
-  margin-top: 10px;
-}
-
-.popup-form .close-button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.popup-form .close-button:hover {
-  background-color: #0056b3;
-}  */
-
-
 .popup-form {
   position: fixed;
   top: 0;
@@ -105,33 +19,38 @@
 
 .popup-form label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: bold;
 }
 
 .popup-form input[type="email"],
-.popup-form input[type="text"] {
+.popup-form input[type="text"],
+.popup-form input[type="tel"],
+.popup-form input[type="number"],
+.popup-form select {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 10px;
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
 }
 
 .popup-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+  background-color: #fff; /* White background */
+  color: #6A0DAD; /* Purple text */
+  border: none; /* No border */
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold; /* Bold text */
+  padding: 8px 16px;
+  margin-right: 10px;
 }
 
 .popup-form button:hover {
-  background-color: #0056b3;
+  background-color: #f0f0f0; /* Light grey background on hover */
 }
 
 .popup-form .error {
@@ -153,18 +72,57 @@
 }
 
 .popup-form .close-button {
+  width: 10%;
   position: absolute;
-  bottom: 50px;
-  left: 20px;
-  background-color: #007bff;
-  color: #fff;
+  top: 20px;
+  right: 20px;
+  background: none;
   border: none;
-  padding: 10px;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  padding: 0;
 }
 
-.popup-form .close-button:hover {
-  background-color: #0056b3;
+.popup-form .close-button svg {
+  fill: #000;
+}
+
+.popup-form .stage-indicator {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.popup-form .stage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-right: 10px;
+}
+
+.popup-form .stage.active {
+  background-color: #6A0DAD; /* Purple background */
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-group button {
+  margin-right: 10px;
+  background-color: #fff; /* White background */
+  color: #6A0DAD; /* Purple text */
+  border: none; /* No border */
+  padding: 8px 16px;
+  font-size: 18px; /* Increased font size */
+  font-weight: bold; /* Bold text */
+}
+
+.button-group button:hover {
+  background-color: #f0f0f0; /* Light grey background on hover */
 }

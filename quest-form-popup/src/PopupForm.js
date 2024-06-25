@@ -409,16 +409,23 @@ const PopupForm = ({ closeForm, setIsAuthenticated }) => {
             // Create a map of form field names to action IDs
             const actionMap = {};
             campaignData.actions.forEach(action => {
-                actionMap[action.title.toLowerCase()] = action.actionId;
+                const formattedTitle = action.title.toLowerCase().replace(/\s+/g, '');
+                actionMap[formattedTitle] = action.actionId;
             });
 
             console.log('Action Map:', actionMap); // Log action map to console for debugging
 
-            // Map form answers to action IDs
-            const actions = Object.keys(formAnswers).map(key => ({
-                actionId: actionMap[key.toLowerCase()],
-                answers: [formAnswers[key]]
-            }));
+            // Ensure all form fields are correctly mapped to their respective action IDs
+            const actions = Object.keys(formAnswers).map(key => {
+                const formattedKey = key.toLowerCase().replace(/\s+/g, '');
+                const actionId = actionMap[formattedKey];
+                const answer = formAnswers[key];
+                console.log(`Mapping field '${key}' to actionId '${actionId}' with answer '${answer}'`);
+                return {
+                    actionId: actionId,
+                    answers: [answer]
+                };
+            });
 
             const payload = {
                 actions: actions.filter(action => action.actionId && action.answers[0] !== null && action.answers[0] !== ''), // Remove null or empty values and ensure actionId is valid
@@ -596,5 +603,7 @@ const PopupForm = ({ closeForm, setIsAuthenticated }) => {
 };
 
 export default PopupForm;
+
+
 
 

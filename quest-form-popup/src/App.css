@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -178,7 +178,7 @@ footer {
   background-color: #0056b3;
 }
 
-/* Responsive Styles */
+/* Responsive Styles 
 @media (max-width: 768px) {
   .navbar-toggle {
     display: block;
@@ -210,5 +210,251 @@ footer {
   .hero-buttons .get-started-button,
   .hero-buttons .watch-video-button {
     margin: 5px 0;
+  }
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.navbar {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-extras {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-selector select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.login-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.get-started-button {
+  background-color: #6A0DAD; 
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.get-started-button:hover {
+  background-color: #4A0DAD;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar.active .navbar-links {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar.active .navbar-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  color: white;
+  min-height: 400px;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .get-started-button,
+.hero-buttons .watch-video-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.get-started-button {
+  background-color: #6A0DAD;
+  color: white;
+}
+
+.watch-video-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.hero-image {
+  max-width: 50%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 8px;
+  max-height: 400px;
+}
+
+footer {
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.connect-with-sales-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-modal video {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.video-modal .close-video-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.video-modal .close-video-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar.active .navbar-links {
+    display: flex;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-buttons .get-started-button,
+  .hero-buttons .watch-video-button {
+    margin: 5px 0;
+  }
+
+  .get-started-button {
+    font-size: 14px;
+    padding: 6px 12px;
   }
 }

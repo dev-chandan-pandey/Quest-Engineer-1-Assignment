@@ -363,13 +363,15 @@ body {
 .hero-image img {
   width: 100%;
   border-radius: 8px;
-  max-height: 400px;
+  /* max-height: 400px;
+  min-width: 300px; */
 }
 
 footer {
-  position: sticky;
-  bottom:0px;
-  left: 0px;
+ position: sticky;
+ bottom: 0px;
+ left: 0px;
+ z-index: 2;
   padding: 20px;
   background-color: #f8f8f8;
   color: #333;

@@ -357,7 +357,7 @@ body {
 
 .hero-image {
   max-width: 50%;
-  height: 100%;
+
 }
 
 .hero-image img {
@@ -367,6 +367,9 @@ body {
 }
 
 footer {
+  position: sticky;
+  bottom:0px;
+  left: 0px;
   padding: 20px;
   background-color: #f8f8f8;
   color: #333;

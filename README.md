@@ -60,3 +60,30 @@ This project is a React application designed to automatically log in a user usin
     "apisecret": "your-api-secret",
     "entity-authentication-token": "your-entity-authentication-token"
   }
+  ```
+  ## Folder Structure
+
+```plaintext
+react-auto-login-app
+├── public
+│   ├── index.html
+│   └── ...
+├── src
+│   ├── components
+│   │   ├── App.js
+│   │   ├── PopupForm.js
+│   │   ├── Footer.js
+│   │   └── ...
+│   ├── assets
+│   │   └── images
+│   ├── styles
+│   │   ├── App.css
+│   │   ├── PopupForm.css
+│   │   ├── Footer.css
+│   │   └── ...
+│   ├── config.js
+│   ├── index.js
+│   └── ...
+├── .env
+├── package.json
+└── README.md

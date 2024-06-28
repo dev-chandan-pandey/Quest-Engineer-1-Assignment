@@ -627,7 +627,7 @@ const PopupForm = ({ closeForm, setIsAuthenticated }) => {
         industry: '',
         numberOfEmployees: '',
         country: '',
-        howDidYouHear: ''
+        howdidyouhearaboutus: ''
     });
 
     const industries = ['Technology', 'Finance', 'Healthcare', 'Education', 'Retail'];
@@ -854,8 +854,8 @@ const PopupForm = ({ closeForm, setIsAuthenticated }) => {
                                     How did you hear about us:
                                     <input
                                         type="text"
-                                        name="howDidYouHear"
-                                        value={formAnswers.howDidYouHear}
+                                        name="howdidyouhearaboutus"
+                                        value={formAnswers.howdidyouhearaboutus}
                                         onChange={handleInputChange}
                                     />
                                 </label>
@@ -873,4 +873,3 @@ const PopupForm = ({ closeForm, setIsAuthenticated }) => {
 };
 
 export default PopupForm;
-
